@@ -19,3 +19,7 @@ bash "install_pypy" do
   EOH
   not_if {File.exists?("#{Chef::Config[:file_cache_path]}/pypy-#{version}-linux64.tar.bz2")}
 end
+
+link "/usr/bin/pypy" do
+      to "/opt/#{version}/bin/pypy"
+end
