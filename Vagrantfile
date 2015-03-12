@@ -11,7 +11,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+<<<<<<< HEAD
   config.vm.hostname = 'pypy-berkshelf'
+=======
+  config.vm.hostname = 'mesos-berkshelf'
+>>>>>>> d1262f43cf5377e956ff896bdecd422800400a4c
 
   # Set the version of chef to install using the vagrant-omnibus plugin
   # NOTE: You will need to install the vagrant-omnibus plugin:
@@ -84,7 +88,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
+<<<<<<< HEAD
       'recipe[pypy::default]'
+=======
+      'recipe[mesos::default]'
+>>>>>>> d1262f43cf5377e956ff896bdecd422800400a4c
     ]
   end
 end

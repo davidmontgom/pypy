@@ -12,5 +12,9 @@ platforms:
 suites:
   - name: default
     run_list:
+<<<<<<< HEAD
       - recipe[pypy::default]
+=======
+      - recipe[mesos::default]
+>>>>>>> d1262f43cf5377e956ff896bdecd422800400a4c
     attributes:
