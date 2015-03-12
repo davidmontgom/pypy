@@ -23,3 +23,21 @@ end
 link "/usr/bin/pypy" do
       to "/opt/pypy-#{version}-linux64/bin/pypy"
 end
+
+
+=begin
+bash "install_pypy_bs4" do
+  cwd "#{Chef::Config[:file_cache_path]}"
+  code <<-EOH
+    /opt/pypy-#{version}-linux64/bin/easy_install beautifulsoup4
+    touch #{Chef::Config[:file_cache_path]}/pypy_bs4.lock
+  EOH
+  not_if {File.exists?("#{Chef::Config[:file_cache_path]}/pypy_bs4.lock")}
+end
+=end
+
+
+
+
+
+
