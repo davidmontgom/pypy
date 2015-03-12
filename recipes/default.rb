@@ -21,5 +21,5 @@ bash "install_pypy" do
 end
 
 link "/usr/bin/pypy" do
-      to "/opt/#{version}-linux64/bin/pypy"
+      to "/opt/pypy-#{version}-linux64/bin/pypy"
 end
